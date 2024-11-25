@@ -1,4 +1,4 @@
-name: MERN CI/CD Pipeline
+name: MERN CI/CD Pipeline #shown on the top of the actions page
 
 on:   #means on this event, the pipeline will run/triggered
   push: #when push event occurs, and runs the jobs
@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 #pulls the code from the repository into the workflow runner
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3 #sets up the node.js environment
         with:
           node-version: 16
 
