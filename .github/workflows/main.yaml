@@ -9,7 +9,7 @@ on:   #means on this event, the pipeline will run/triggered
       - main
 
 jobs:
-  backend:
+  server:
     name: Server Build and Test
     runs-on: ubuntu-latest #runs on ubuntu
 
@@ -32,7 +32,7 @@ jobs:
           cd server
           npm test
 
-  frontend:
+  client:
     name: Client Build and Test
     runs-on: ubuntu-latest
 
@@ -59,3 +59,4 @@ jobs:
         run: |
           cd client
           npm run build
+
